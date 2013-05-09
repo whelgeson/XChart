@@ -9,7 +9,7 @@
   <pluginGroups/>
   <servers>
     <server>
-      <id>khs-snapshot</id>
+      <id>xeiam_oss.sonatype-nexus-snapshots</id>
       <username>${env.CI_DEPLOY_USERNAME}</username>
       <password>${env.CI_DEPLOY_PASSWORD}</password>
     </server>
