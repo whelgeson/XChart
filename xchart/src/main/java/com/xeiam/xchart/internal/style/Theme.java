@@ -99,6 +99,10 @@ public interface Theme {
   public int getXAxisTickMarkSpacingHint();
 
   public int getYAxisTickMarkSpacingHint();
+  
+  public double getXAxisRotaion();
+
+  public double getYAxisRotaion();
 
   // Chart Plot Area ///////////////////////////////
 

@@ -15,6 +15,7 @@
  */
 package com.xeiam.xchart.internal.chartpart;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Shape;
 import java.awt.font.FontRenderContext;
@@ -81,6 +82,10 @@ public class AxisTickLabels implements ChartPart {
           AffineTransform orig = g.getTransform();
           AffineTransform at = new AffineTransform();
           at.translate(xOffset, flippedTickLocation + tickLabelBounds.getHeight() / 2.0);
+          
+          //
+          at.rotate(getChartPainter().getStyleManager().getYAxisRotation());
+          
           g.transform(at);
           g.fill(shape);
           g.setTransform(orig);
@@ -121,10 +126,13 @@ public class AxisTickLabels implements ChartPart {
           // Shape shape = v.getOutline();
           Shape shape = textLayout.getOutline(null);
           Rectangle2D tickLabelBounds = shape.getBounds2D();
-
           AffineTransform orig = g.getTransform();
           AffineTransform at = new AffineTransform();
           at.translate(shiftedTickLocation - tickLabelBounds.getWidth() / 2.0, yOffset);
+
+          //
+          at.rotate(getChartPainter().getStyleManager().getXAxisRotation());
+
           g.transform(at);
           g.fill(shape);
           g.setTransform(orig);
@@ -141,8 +149,8 @@ public class AxisTickLabels implements ChartPart {
 
       // bounds
       bounds = new Rectangle2D.Double(xOffset, yOffset - maxTickLabelHeight, width, maxTickLabelHeight);
-      // g.setColor(Color.blue);
-      // g.draw(bounds);
+       g.setColor(Color.blue);
+       g.draw(bounds);
 
     }
 

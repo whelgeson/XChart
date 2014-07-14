@@ -52,7 +52,8 @@ public class AreaChart01 implements ExampleChart {
     // Customize Chart
     chart.getStyleManager().setLegendPosition(LegendPosition.InsideNW);
     chart.getStyleManager().setAxisTitlesVisible(false);
-
+    chart.getStyleManager().setXAxisRotation(45);
+    chart.getStyleManager().setYAxisRotation(45);
     return chart;
   }
 

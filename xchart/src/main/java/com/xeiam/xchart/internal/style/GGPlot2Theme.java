@@ -234,6 +234,18 @@ public class GGPlot2Theme implements Theme {
 
     return 44;
   }
+  
+  @Override
+  public double getXAxisRotaion() {
+
+    return 0;
+  }
+
+  @Override
+  public double getYAxisRotaion() {
+
+    return 0;
+  }
 
   // Chart Plot Area ///////////////////////////////
 

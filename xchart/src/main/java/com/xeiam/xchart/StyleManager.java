@@ -116,7 +116,11 @@ public class StyleManager {
   private Double xAxisMax;
   private Double yAxisMin;
   private Double yAxisMax;
+  private double xAxisRotation;
+  private double yAxisRotation;
+  
   private double axisTickSpaceRatio;
+
 
   // Chart Plot Area ///////////////////////////////
   private boolean isPlotGridLinesVisible;
@@ -201,6 +205,9 @@ public class StyleManager {
     yAxisMin = null;
     yAxisMax = null;
     axisTickSpaceRatio = .95;
+    xAxisRotation = theme.getXAxisRotaion();
+    yAxisRotation = theme.getYAxisRotaion();
+    
 
     // Chart Plot Area ///////////////////////////////
     isPlotGridLinesVisible = theme.isPlotGridLinesVisible();
@@ -872,6 +879,26 @@ public class StyleManager {
     return axisTickSpaceRatio;
   }
 
+  public void setXAxisRotation(double xAxisRotation) {
+
+	  this.xAxisRotation = xAxisRotation;
+  }
+
+  public Double getXAxisRotation() {
+
+	  return xAxisRotation;
+  }
+  
+  public void setYAxisRotation(double yAxisRotation) {
+
+	  this.yAxisRotation = yAxisRotation;
+  }
+
+  public Double getYAxisRotation() {
+
+	  return yAxisRotation;
+  }
+  
   // Chart Plot Area ///////////////////////////////
 
   /**
@@ -1106,5 +1133,4 @@ public class StyleManager {
 
     return decimalPattern;
   }
-
 }
